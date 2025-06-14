@@ -65,12 +65,34 @@ is_winning = True
 #F-strings provide an efficient way to embed variables of different data types directly into strings without manual type conversion.
 print(f"Your score is {score}, your height is {height}, your are winning is {is_winning}")
 #-----------------------------------------------
-'''
+
 print ("Welcome to the tip calculator!")
-total_bill = int(input("what is the total bill?\n"))
+total_bill = float(input("what is the total bill?\n")) #float because bill can be 44.12
 add_tip = int(input("How much tip would you like to give (in percentage)?\n"))
-split_the_bill = float(input("How many people to split the bill?\n"))
+split_the_bill = int(input("How many people to split the bill?\n"))
 bill = (total_bill * (add_tip / 100)) + total_bill
 print("Bill including tip is =", bill)
 split_amount = bill / split_the_bill
-print (round, float(split_amount))
+final_amout = round(split_amount, 2)
+print(f"Each person should pay: {final_amout}")
+#-----------------------------------------------
+'''
+#Day3
+# Condition check
+
+water_level = 90
+if water_level > 80:
+    print("Drain water")
+else:
+    print ("continue")
+#-----------------------------------------------
+print("Welcome to the rollercoaster!")
+height = int(input("Whats is your height?\n"))
+if height >= 150:
+    print("You are allowed to ride rollercoaster")
+if height == 120:
+# one "=" sign means assigning value to variable.
+# two "=" sing means check equality from left side to right side.
+    print("You can ride mini rollercoaster")
+else:
+    print("You are not allowed to ride rollercoaster")

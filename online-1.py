@@ -76,7 +76,7 @@ split_amount = bill / split_the_bill
 final_amout = round(split_amount, 2)
 print(f"Each person should pay: {final_amout}")
 #-----------------------------------------------
-'''
+
 #Day3
 # Condition check
 
@@ -96,3 +96,103 @@ if height == 120:
     print("You can ride mini rollercoaster")
 else:
     print("You are not allowed to ride rollercoaster")
+#-----------------------------------------------
+
+number = (int(input("chose number between 1 and 100:\n")))
+modulo = number % 2
+if modulo == 0:
+    print("Even number")
+else:
+    print("Odd number")
+#-----------------------------------------------
+#Nested if/else
+
+print ("Welcome to the wonderland")
+Height = int (input("What is your height?"))
+bill=0
+if Height > 120:
+    print("You can have the entry pass")
+    Age = int (input("What is your Age?"))
+    if Age <12:
+            print ("Your ticket price is $5")
+            bill = 5
+    elif Age <=18:
+            print ("Your ticket price is $8")
+            bill = 8
+    else:
+            print("Your ticket price is $12")
+            bill = 12
+    photo = input("Do you want ride photo? Y/N:")
+    if photo == 'Y':
+        bill = bill + 3
+    print(bill)
+else:
+    print("No entry!")
+#-----------------------------------------------
+
+print("Welcom to Python Pizza Deliveries!")
+size = input("what size pizza do you want? S, M, or L: ")
+bill = 0
+if size == "S":
+    bill = 15
+    pep = input("Do you want pepperoni on your Pizza? Y/N: ")
+    if pep == 'Y':
+        bill=bill+3
+    cheese = input("Do you want cheese on your Pizza? Y/N: ")
+    if cheese == 'Y':
+        bill=bill+1
+    print("Your bill is $", bill)
+if size == "M":
+    bill = 20
+    pep = input("Do you want pepperoni on your Pizza? Y/N: ")
+    if pep == 'Y':
+        bill=bill+3
+    cheese = input("Do you want cheese on your Pizza? Y/N: ")
+    if cheese == 'Y':
+        bill=bill+1
+    print("Your bill is $", bill)
+elif size == "L":
+    bill = 25
+    pep = input("Do you want pepperoni on your Pizza? Y/N: ")
+    if pep == 'Y':
+        bill=bill+3
+    cheese = input("Do you want cheese on your Pizza? Y/N: ")
+    if cheese == 'Y':
+        bill=bill+1
+    print("Your bill is $", bill)
+# -----------------------------------------------
+'''
+print("Welcome to Python Pizza Deliveries!")
+
+size = input("What size pizza do you want? (S, M, or L): ")
+
+bill = 0
+
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
+elif size == "L":
+    bill += 25
+else:
+    print("You entered an invalid size option. Please restart and pick S, M, or L.")
+    exit()
+
+pep = input("Do you want pepperoni on your pizza? (Y/N): ")
+if pep == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+elif pep != "N":
+    print("Invalid input for pepperoni. Please restart and pick Y or N.")
+    exit()
+
+cheese = input("Do you want extra cheese on your pizza? (Y/N): ")
+if cheese == "Y":
+    bill += 1
+elif cheese != "N":
+    print("Invalid input for extra cheese. Please restart and pick Y or N.")
+    exit()
+
+print(f"Your final bill is ${bill}.")

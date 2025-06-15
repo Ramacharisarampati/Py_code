@@ -161,7 +161,7 @@ elif size == "L":
         bill=bill+1
     print("Your bill is $", bill)
 # -----------------------------------------------
-'''
+
 print("Welcome to Python Pizza Deliveries!")
 
 size = input("What size pizza do you want? (S, M, or L): ")
@@ -196,3 +196,48 @@ elif cheese != "N":
     exit()
 
 print(f"Your final bill is ${bill}.")
+# -----------------------------------------------
+'''
+# Logical operators
+
+#True and True = True
+#True and False = False
+#False and False = False
+#False and True = False
+
+#True or True = True
+#True or False = True
+#False or True = True
+#False or False = False
+
+# not False = True
+# not True = False
+#Added Logical operator "elif Age >=45 and Age <=55:"
+
+print ("Welcome to the wonderland")
+Height = int (input("What is your height?"))
+bill=0
+if Height > 120:
+    print("You can have the entry pass")
+    Age = int (input("What is your Age?"))
+    if Age <12:
+            print ("Your ticket price is $5")
+            bill = 5
+    elif Age <=18:
+            print ("Your ticket price is $8")
+            bill = 8
+    elif Age >=45 and Age <=55:
+        print ("You got a free ticket!")
+
+    else:
+            print("Your ticket price is $12")
+            bill = 12
+    photo = input("Do you want ride photo? Y/N:")
+    if photo == 'Y':
+        if Age >=45 and Age <=55:
+            bill = 0
+        else:
+            bill = bill + 3
+    print("Your total bill: $ ", bill)
+else:
+    print("No entry!")
